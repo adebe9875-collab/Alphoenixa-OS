@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALphoenixa OS</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-header {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .header-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .header-logo span { color: #f59e0b; }
+  .header-nav { display: flex; gap: 20px; }
+  .nav-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    transition: color 0.2s;
+  }
+  .nav-link:hover, .nav-link.active { color: #f8fafc; }
+
+  .main-content { padding: 30px 20px; text-align: center; }
+  .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
+
+  .info-box { background: #0f172a; border-right: 5px solid #2563eb; padding: 15px; text-align: right; border-radius: 8px; margin-bottom: 20px; }
+  .info-box.alert { border-right-color: #f59e0b; }
+  .info-box.danger { border-right-color: #ef4444; }
+  .info-box h4 { margin-top: 0; color: #f59e0b; font-size: 1.1rem; }
+  .info-box.danger h4 { color: #ef4444; }
+  .info-box p, .info-box ul { margin: 5px 0; font-size: 0.95rem; line-height: 1.6; padding-right: 20px; }
+
+  .action-btn {
+    width: auto; padding: 14px 28px; border: none;
+    border-radius: 10px; background: #2563eb; color: #fff;
+    font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 10px;
+  }
+  .action-btn:hover { background: #1d4ed8; }
+
+  .key-box {
+    background: #0f172a; border-radius: 10px; padding: 16px; direction: ltr;
+    text-align: left; font-family: monospace; font-size: 13px; color: #22c55e; line-height: 2;
+  }
+
+  .view { display: none; text-align: right; }
+  .view.active { display: block; }
+
+  @media (max-width: 600px) {
+    .site-header { flex-direction: column; gap: 10px; padding: 15px; }
+    .header-nav { gap: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#" class="header-logo">ALphoenixa <span>OS</span></a>
+  <nav class="header-nav">
+    <button class="nav-link active" onclick="showView('download', this)">تحميل</button>
+    <button class="nav-link" onclick="showView('about', this)">النص</button>
+    <button class="nav-link" onclick="showView('keys', this)">المفاتيح</button>
+    <button class="nav-link" onclick="showView('warnings', this)">تحذيرات</button>
+  </nav>
+</header>
+
+<div class="main-content">
+  <div class="container">
+
+    <!-- تبويب التحميل -->
+    <div class="view active" id="view-download">
+      <h2 style="text-align:center;">تحميل ALphoenixa OS</h2>
+      <div class="info-box">
+        <h4>💿 عن هذا الإصدار</h4>
+        <p>ALphoenixa OS هو مشروع تجريبي يحاكي شكل صفحة تحميل نظام تشغيل. اضغط الزر أدناه لتجربة التحميل الوهمي.</p>
+      </div>
+      <div style="text-align:center;">
+        <button class="action-btn" onclick="fakeDownload()">⬇️ تحميل ALphoenixa OS 1.0</button>
+        <p id="downloadStatus" style="color:#94a3b8; font-size:13px; margin-top:12px;"></p>
+      </div>
+    </div>
+
+    <!-- تبويب النص / الوصف -->
+    <div class="view" id="view-about">
+      <h2>عن ALphoenixa OS</h2>
+      <div class="info-box">
+        <p>ALphoenixa OS مشروع عرضي بُني بالكامل باستخدام HTML وCSS وJavaScript، ضمن سلسلة مشاريع تعليمية وتجريبية حول محاكاة واجهات أنظمة التشغيل والصفحات المرتبطة بها.</p>
+        <p>الهدف من المشروع هو التعلم والتجربة فقط، وليس تقديم نظام تشغيل فعلي أو منتج جاهز للاستخدام الحقيقي.</p>
+      </div>
+    </div>
+
+    <!-- تبويب المفاتيح -->
+    <div class="view" id="view-keys">
+      <h2>مفاتيح ALphoenixa OS</h2>
+      <p style="color:#94a3b8; font-size:13px;">مفاتيح تجريبية خاصة بهذا المشروع:</p>
+      <div class="key-box">
+        ALPHX-2026-M9QK-TZRW<br>
+        ALPHX-2026-P4LC-GXVN<br>
+        ALPHX-2026-B7DF-YKMS<br>
+        ALPHX-2026-U2HT-JWCQ<br>
+        ALPHX-2026-E5NX-RLPB
+      </div>
+    </div>
+
+    <!-- تبويب التحذيرات -->
+    <div class="view" id="view-warnings">
+      <h2>تنبيهات مهمة</h2>
+      <div class="info-box danger">
+        <h4>⚠️ هذا النظام غير حقيقي</h4>
+        <p>ALphoenixa OS <strong>ليس نظام تشغيل حقيقياً</strong> — هو محاكاة بصرية بالكامل (وهمية) لصفحة تحميل نظام تشغيل، ولا يحتوي على أي ملفات تشغيل فعلية ولا يقوم بتثبيت أي شيء على جهازك.</p>
+      </div>
+      <div class="info-box alert">
+        <h4>👤 صانع المشروع</h4>
+        <p>هذا المشروع من تصميم وتطوير <strong>آدم</strong>، كجزء من تجربة تعليمية في بناء صفحات وواجهات ويب تفاعلية.</p>
+      </div>
+      <div class="info-box">
+        <h4>🔑 بخصوص المفاتيح</h4>
+        <p>المفاتيح الظاهرة في تبويب "المفاتيح" هي مفاتيح تجريبية وهمية لأغراض العرض فقط، ولا تُستخدم لتفعيل أي منتج أو خدمة حقيقية.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function showView(name, btn) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.querySelectorAll('.header-nav .nav-link').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function fakeDownload() {
+  const status = document.getElementById('downloadStatus');
+  status.textContent = '⏳ جارٍ تجهيز الملف...';
+  setTimeout(() => {
+    const content = 'هذا ملف تجريبي يمثل ALphoenixa OS.\r\nهذا ليس نظام تشغيل حقيقياً — هذا ملف نصي وهمي لأغراض العرض فقط داخل هذا المشروع التعليمي.\r\nصنع بواسطة: آدم.';
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ALphoenixaOS-1.0-readme.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+    status.textContent = '✅ تم تحميل ملف تجريبي (نصي) — هذا مشروع وهمي وليس نظام تشغيل فعلي.';
+  }, 800);
+}
+</script>
+
+</body>
+</html>
