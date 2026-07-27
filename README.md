@@ -7,7 +7,7 @@
 
 ## ✨ About
 
-Alfinux OS is an open-source operating system project focused on creating a modern and lightweight experience.
+Alphoenixa OS is an open-source operating system project focused on creating a modern and lightweight experience.
 
 ### Features
 
@@ -24,7 +24,7 @@ Alfinux OS is an open-source operating system project focused on creating a mode
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Alfinux-OS.git
+git clone https://github.com/adebe9875-collab/Alphoenixa OS.git
 ```
 
 Enter the project:
@@ -50,7 +50,7 @@ cd Alfinux-OS
 
 Contributions are welcome!
 
-If you'd like to improve Alfinux OS, feel free to open an Issue or submit a Pull Request.
+If you'd like to improve Alphoenixa OS, feel free to open an Issue or submit a Pull Request.
 
 ## 📄 License
 
