@@ -30,7 +30,7 @@ git clone https://github.com/adebe9875-collab/Alphoenixa OS.git
 Enter the project:
 
 ```bash
-cd Alfinux-OS
+cd ALphoenixa OS
 ```
 
 ## 📸 Screenshots
