@@ -1,4 +1,5 @@
-# 🐧 ALphoenixa OS
+ ALphoenixa OS# <img src="ALphoenixaOS-logo.png" width="50"alt="ALphoenixaOS-logo.png"/>
+
 > A modern open-source operating system project built with performance, simplicity, and AI integration in mind.
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
