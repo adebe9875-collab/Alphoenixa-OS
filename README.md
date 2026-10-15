@@ -1,4 +1,5 @@
- ALphoenixa OS# <img src="ALphoenixaOS-logo.png" width="50"alt="ALphoenixaOS-logo.png"/>
+# ALphoenixa OS
+ <img src="ALphoenixaOS-logo.png" width="50"alt="ALphoenixaOS-logo.png"/>
 
 > A modern open-source operating system project built with performance, simplicity, and AI integration in mind.
 
